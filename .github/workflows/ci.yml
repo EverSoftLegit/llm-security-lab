@@ -35,7 +35,8 @@ jobs:
           go-version: "1.24"
       - run: python -m pip install -r requirements.txt
       - name: Build verifier
-        run: go build -o verifier-bin ./verifier
+        working-directory: verifier
+        run: go build -o ../verifier-bin .
       - name: Start the lab
         run: |
           PORT=5001 python -m backend.app &
