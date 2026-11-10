@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLM Security Lab — intentionally vulnerable (local only)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>LLM Security Lab</h1>
+    <p class="warn">Intentionally vulnerable training target. Run locally only — never deploy.</p>
+  </header>
+
+  <main>
+    <section id="challenges" aria-label="Challenges">
+      <h2>Challenges</h2>
+      <ul id="challenge-list"></ul>
+    </section>
+
+    <section id="workspace">
+      <div id="challenge-detail"></div>
+
+      <div class="mode">
+        <label><input type="radio" name="mode" value="insecure" checked> Insecure mode (vulnerable)</label>
+        <label><input type="radio" name="mode" value="secure"> Secure mode (defences on)</label>
+      </div>
+
+      <form id="chat-form">
+        <textarea id="message" rows="3" placeholder="Type your message to the assistant…"></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+      <div id="transcript" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
